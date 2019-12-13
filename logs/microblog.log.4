@@ -1,0 +1,114 @@
+2019-12-12 04:10:20,341 INFO: Microblog startup [in C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\__init__.py:45]
+2019-12-12 04:10:25,884 ERROR: Exception on /edit_profile [POST] [in c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\routes.py", line 91, in edit_profile
+    form = EditProfileForm()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\wtforms\form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'original_username'
+2019-12-12 04:12:47,672 INFO: Microblog startup [in C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\__init__.py:45]
+2019-12-12 04:12:55,295 INFO: Microblog startup [in C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\__init__.py:45]
+2019-12-12 04:21:47,762 INFO: Microblog startup [in C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\__init__.py:45]
+2019-12-12 04:25:05,988 INFO: Microblog startup [in C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\__init__.py:45]
+2019-12-12 18:51:40,568 INFO: Microblog startup [in C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\__init__.py:45]
+2019-12-12 18:53:55,065 INFO: Microblog startup [in C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\__init__.py:45]
+2019-12-12 19:16:21,151 INFO: Microblog startup [in C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\__init__.py:45]
+2019-12-12 19:16:43,301 ERROR: Exception on /index [GET] [in c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\routes.py", line 28, in index
+    posts = current_user.followed_posts().all()
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\models.py", line 58, in followed_posts
+    followers, (followers.c.followed_id == Post.user_id)).filter(
+NameError: name 'followers' is not defined
+2019-12-12 19:16:47,097 ERROR: Exception on /index [GET] [in c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\routes.py", line 28, in index
+    posts = current_user.followed_posts().all()
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\models.py", line 58, in followed_posts
+    followers, (followers.c.followed_id == Post.user_id)).filter(
+NameError: name 'followers' is not defined
+2019-12-12 19:16:48,884 ERROR: Exception on /index [GET] [in c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\routes.py", line 28, in index
+    posts = current_user.followed_posts().all()
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\models.py", line 58, in followed_posts
+    followers, (followers.c.followed_id == Post.user_id)).filter(
+NameError: name 'followers' is not defined
+2019-12-12 19:17:03,189 ERROR: Exception on /index [GET] [in c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\routes.py", line 28, in index
+    posts = current_user.followed_posts().all()
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\models.py", line 58, in followed_posts
+    followers, (followers.c.followed_id == Post.user_id)).filter(
+NameError: name 'followers' is not defined
+2019-12-12 19:17:46,520 INFO: Microblog startup [in C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\__init__.py:45]

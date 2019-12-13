@@ -1,0 +1,112 @@
+2019-12-12 19:18:02,172 ERROR: Exception on /index [GET] [in c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\routes.py", line 29, in index
+    posts = current_user.followed_posts().paginate(
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\models.py", line 58, in followed_posts
+    followers, (followers.c.followed_id == Post.user_id)).filter(
+NameError: name 'followers' is not defined
+2019-12-12 19:19:00,883 INFO: Microblog startup [in C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\__init__.py:45]
+2019-12-12 19:19:18,138 ERROR: Exception on /index [GET] [in c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\routes.py", line 38, in index
+    return render_template("index.html", title='Home Page', form=form,
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\templates\index.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\templates\index.html", line 14, in root
+    </p>
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\templates\base.html", line 55, in root
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\templates\index.html", line 50, in block_content
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\templates\_post.html", line 13, in root
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\runtime.py", line 630, in _fail_with_undefined_error
+    raise self._undefined_exception(hint)
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'avatar'
+2019-12-12 19:36:17,839 INFO: Microblog startup [in C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\__init__.py:45]
+2019-12-12 19:36:26,112 ERROR: Exception on /index [GET] [in c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\routes.py", line 38, in index
+    return render_template("index.html", title='Home Page', form=form,
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\templates\index.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\templates\index.html", line 14, in root
+    </p>
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\templates\base.html", line 55, in root
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\templates\index.html", line 50, in block_content
+  File "C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\templates\_post.html", line 13, in root
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\srira\onedrive\desktop\anvesh\wp\microblog\venv\lib\site-packages\jinja2\runtime.py", line 630, in _fail_with_undefined_error
+    raise self._undefined_exception(hint)
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'avatar'
+2019-12-12 19:37:59,710 INFO: Microblog startup [in C:\Users\srira\OneDrive\Desktop\Anvesh\WP\microblog\app\__init__.py:45]
