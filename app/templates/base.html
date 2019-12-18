@@ -22,9 +22,12 @@
                     <li><a href="{{ url_for('explore') }}">Explore</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    
                     {% if current_user.is_anonymous %}
                     <li><a href="{{ url_for('login') }}">Login</a></li>
                     {% else %}
+                    <li><input id="searchUser" type="text" style="margin-top: 13px;"></input></li>
+                    <li><a href="" id="search" >Search</a></li>
                     <li><a href="{{ url_for('user', username=current_user.username) }}">Profile</a></li>
                     <li><a href="{{ url_for('logout') }}">Logout</a></li>
                     {% endif %}
@@ -32,6 +35,14 @@
             </div>
         </div>
     </nav>
+
+    <script type="text/javascript">
+        var search = document.getElementById("search");
+        search.onclick = function(){
+            var searchUrl = "/user/"+document.getElementById("searchUser").value;
+            search.href = searchUrl;
+        }
+    </script>
 {% endblock %}
 
 {% block content %}
